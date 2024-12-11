@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> miss na kitaa</title>
+</head>
+ <style>
+   body{
+     background-color: green;
+   }
+   button {
+    align-content: center;
+    font-size: 50px;
+    
+   }
+ </style>
+<body>
+    <textarea id="myTextarea" rows="10" cols="50"></textarea>
+    <button onclick="startTyping()">click this</button><br>
+    <img src="tak.jpg" alt=" hello" height="500" width="350">
+    <script>
+        const myTextarea = document.getElementById('myTextarea');
+        const textToType = " hello lovee, alam mo ba na miss na miss na kitaaaaa, lika ditoo pahinga kana sa akin, pagod na pagod kana dyan ihh. tiis tiis langg po ikaw dyan love ha? wait mo lang ako mag ka work makakaalis kana dyan, wag po susuko, iloveyouuusoooomuchh, mwaaaaaaaa mwaaaaaaaaaa mwaaaaaaaa mwaaaaaaa mwaaaaaa mwaaaaa mwaaaaa";
+
+        function startTyping() {
+            let i = 0;
+            const intervalId = setInterval(() => {
+                myTextarea.value += textToType[i];
+                i++;
+                if (i >= textToType.length) {
+                    clearInterval(intervalId);
+                }
+            }, 100); // Adjust the delay (in milliseconds) for typing speed
+        }
+    </script>
+</body>
+</html>
